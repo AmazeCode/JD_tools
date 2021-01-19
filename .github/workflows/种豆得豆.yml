@@ -1,6 +1,5 @@
 name: JD_plantBean
 
-
 on:
   schedule:
     - cron: '0 * * * * '
