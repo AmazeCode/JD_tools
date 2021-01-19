@@ -1,6 +1,5 @@
 name: 宠汪汪
 
-
 on:
   schedule:
     - cron: '30 * * * * '
