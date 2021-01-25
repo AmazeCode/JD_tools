@@ -13,6 +13,10 @@ import time
 """
 shareCodes = [
               "a10d77f7267e8200fe02cbda87a5ff90",
+              "d2d5d435675544679413cb9145577e0f",  # DoveBoy
+              ]  # 欢迎在此处填写
+"""
+              "a10d77f7267e8200fe02cbda87a5ff90",
               "c081c648576e4e61a9697c3981705826",
               "f1d0d5ebda7c48c6b3d262d5574315c7",
               "13d13188218a4e3aae0c4db803c81985",
@@ -33,7 +37,7 @@ shareCodes = [
               "3b2e1bee164249bca099b60d7e4b0082",  # wuli01
               "6447c9c61b0c4f9a89b6d497fcaf47c9",  # wuli01
               "e4ab3f1c4add4513b07ee88b9c9f7784",  # heros-sky
-              ]  # 欢迎在此处填写
+"""
 
 
 def postTemplate(cookies, functionId, body):
