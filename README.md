@@ -15,6 +15,7 @@
 - 本人对任何脚本问题概不负责，包括但不限于由任何脚本错误导致的任何损失或损害
 
 - 请勿将本仓库的任何内容用于商业或非法目的，否则后果自负
+- 本项目引用自：https://github.com/Zero-S1/JD_tools 具体最新项目进展参照原项目
 
   
 
@@ -64,7 +65,7 @@ GitHub action自动运行，账号信息读取自 `Setting -> Secrets`
 
 **Secrets 填写格式**  
 新建secret名称为`JD_COOKIE`    
-单账号为  
+单账号为(登录京东账号直接找pt_pin和pt_key对应的值)  
 `pt_pin=aaaaaa&pt_key=bbbbbbb`
 
 
