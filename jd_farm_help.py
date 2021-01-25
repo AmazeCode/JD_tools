@@ -11,7 +11,9 @@ import time
 4、欢迎补充一个足够多的shareCodes列表
 5、cron 0 */3 * * *
 """
-shareCodes = ["c081c648576e4e61a9697c3981705826",
+shareCodes = [
+              "a10d77f7267e8200fe02cbda87a5ff90",
+              "c081c648576e4e61a9697c3981705826",
               "f1d0d5ebda7c48c6b3d262d5574315c7",
               "13d13188218a4e3aae0c4db803c81985",
               "d2d5d435675544679413cb9145577e0f",  # DoveBoy
