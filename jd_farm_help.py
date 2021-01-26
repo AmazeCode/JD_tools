@@ -12,8 +12,9 @@ import time
 5、cron 0 */3 * * *
 """
 shareCodes = [
-              "a10d77f7267e8200fe02cbda87a5ff90",
-              "d2d5d435675544679413cb9145577e0f",  # DoveBoy
+              "a10d77f7267e8200fe02cbda87a5ff90",  # dong
+              "b0bc7a1ed9d97a59480d97b624ea82a4",  # cui
+              "cd77e671d8b6952b1855f05cc65890d5",  # happiness
               ]  # 欢迎在此处填写
 """
               "a10d77f7267e8200fe02cbda87a5ff90",
