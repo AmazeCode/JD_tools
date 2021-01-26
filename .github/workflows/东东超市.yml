@@ -1,9 +1,14 @@
 name: 东东超市
 
-
 on:
   schedule:
     - cron: '5 * * * *'
+  watch:
+    types: [started]
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]    
 jobs:
   build:
     runs-on: ubuntu-latest
