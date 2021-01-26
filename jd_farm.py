@@ -19,6 +19,7 @@ waterFriendLimit = 2  # [0,2]   0: 始终不替他人浇水   2: 替他人浇水
 
 shareCodes = ["e0f290656b634dbeab0a0da0747c8140",#dong
               "99efa1431bb54cd8a34aaa90717fa1d8",#cui
+              "ab11c483a1c542c285fb95c4fe65b640",#junwei
               "c081c648576e4e61a9697c3981705826",
               "f1d0d5ebda7c48c6b3d262d5574315c7",
               "13d13188218a4e3aae0c4db803c81985"]
