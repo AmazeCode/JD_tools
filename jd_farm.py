@@ -14,7 +14,7 @@ import notification
 5、cron 35 6,11,17,23 * * *
 """
 waterTimesLimit = 20  # 自定义的每天浇水最大次数
-retainWaterLimit = 100  # 完成10次浇水任务的基础上,希望水滴始终高于此数
+retainWaterLimit = 10  # 完成10次浇水任务的基础上,希望水滴始终高于此数
 waterFriendLimit = 2  # [0,2]   0: 始终不替他人浇水   2: 替他人浇水2次以完成任务获得25水
 
 shareCodes = ["e0f290656b634dbeab0a0da0747c8140",#dong
