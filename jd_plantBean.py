@@ -11,9 +11,13 @@ import jdCookie
 2、cron 35 6-23 * * *
 """
 
-plantUuid = ["7pt22jcko7ljrbpeask7r6avre3h7wlwy7o5jii",
+plantUuid = ["e7lhibzb3zek2epdhv3libuhint2ydnoc3f6wlq",
+             "olmijoxgmjutya5x4ge5nninkglpceeswgr5jza"]  # 填写别人的助力码
+"""
+             "7pt22jcko7ljrbpeask7r6avre3h7wlwy7o5jii",
              "r7zdf2yfo4phlpel3nu4q63reu",
-             "e7lhibzb3zek2ssdsoyhpgn26va7nkkzj6ygely"]  # 填写别人的助力码
+             "e7lhibzb3zek2ssdsoyhpgn26va7nkkzj6ygely",
+"""
 
 def functionTemplate(cookies, functionId, body):
     headers = {
