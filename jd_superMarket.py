@@ -453,7 +453,7 @@ def run():
         upgrade(cookies)
         sign(cookies)
         dailyTask(cookies)
-        manage(cookies)
+        #manage(cookies)
         limitTimePro(cookies)
         #productList(cookies)
         currentGold(cookies)
