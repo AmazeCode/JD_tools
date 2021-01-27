@@ -6,10 +6,10 @@ on:
     - cron: '23 0 * * * '
   watch:
     types: [started]
-  push:
-    branches: [master]
-  pull_request:
-    branches: [master]  
+  #push:
+    #branches: [master]  #项目提交到master分只,自动流程重启流程,所有流程
+  #pull_request:
+    #branches: [master]  #项目拉取自动更行到master分支
 jobs:
   build:
     runs-on: ubuntu-latest
