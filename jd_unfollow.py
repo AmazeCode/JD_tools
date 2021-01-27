@@ -10,7 +10,7 @@ jd取消关注店铺、商品  参考自 @uniqueque (https://github.com/uniquequ
 
 
 """
-NUM = 50  # 执行一次，取消关注的数量
+NUM = 5  # 执行一次，取消关注的数量
 unfollowdShopsFlag = 1  # 取关店铺,停用置为0
 unfollowdGoodsFlag = 1  # 取关商品,停用置为0
 
