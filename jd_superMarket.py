@@ -330,7 +330,7 @@ def lottery(cookies):
             print(result["bizMsg"])
             return
 
-"""
+
 def pk(cookies):
     print("\n【PK有礼】")  # TODO
     data = getTemplate(cookies, "smtg_getTeamPkDetailInfo", {})[
@@ -370,8 +370,7 @@ def pk(cookies):
         # print(tmp)
         result1 = getTemplate(cookies, "smtg_joinPkTeam", {"teamId": tmp["teamId"],
                                                            "inviteCode": random.choice(tmp["inviteCode"]), "sharePkActivityId": data["pkActivityId"], "channel": "3"})
-        print(result1)
-"""  
+        print(result1)  
 
 
 def manage(cookies):
@@ -454,9 +453,11 @@ def run():
         upgrade(cookies)
         sign(cookies)
         dailyTask(cookies)
-        # manage(cookies)
+        manage(cookies)
         limitTimePro(cookies)
-        pk(cookies)
+        productList(cookies)
+        currentGold(cookies)
+        #pk(cookies)
         lottery(cookies)
         exchangeBean_1000(cookies)
         exchangeBean_1(cookies)
