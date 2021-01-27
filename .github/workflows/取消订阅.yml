@@ -1,0 +1,32 @@
+name: 取消订阅
+
+on:
+  schedule:
+    - cron: '30 9 * * * '
+  watch:
+    types: [started]
+  push:
+    branches: [master]  #项目提交到master分只,自动流程重启流程,所有流程
+  #pull_request:
+    #branches: [master]  #项目拉取自动更行到master分支  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - name: 'Set up Python'
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
+         
+      - name: 'Install requirements'
+        run: pip install -r ./requirements.txt 
+        
+      - name: 'run 取消订阅' 
+        run: python3 jd_unfollow.py  
+        env:
+            JD_COOKIE: ${{ secrets.JD_COOKIE }}
+            SCKEY: ${{ secrets.SCKEY }}
+            BARK: ${{ secrets.BARK }}
