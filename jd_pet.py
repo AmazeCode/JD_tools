@@ -18,6 +18,8 @@ retainFoodAmountLimit = 40  # 完成10次喂养任务的基础上,希望food始�
 shareCodes = [
     "MTAxODc2NTEzMTAwMDAwMDAxNzU2NzExOQ==", #dong
     "MTAxODc2NTE0NzAwMDAwMDAwNTcxOTg3NQ==",  #cui
+    "MTE1NDQ5MzYwMDAwMDAwNDM5Mjg4MjE=", #李幸福
+    "MTE1NDUwMTI0MDAwMDAwMDQzOTM4NDgx", #李源儿
     "MTAxODc2NTEzMTAwMDAwMDAwOTYwNDkzMQ==", 
     "MTAxODcxOTI2NTAwMDAwMDAwMTY0NTc4OQ==", 
     "MTAxODc2NTEzMDAwMDAwMDAyNjYzMDQ3MQ=="
