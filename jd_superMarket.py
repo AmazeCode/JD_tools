@@ -455,7 +455,7 @@ def run():
         dailyTask(cookies)
         manage(cookies)
         limitTimePro(cookies)
-        productList(cookies)
+        #productList(cookies)
         currentGold(cookies)
         #pk(cookies)
         lottery(cookies)
