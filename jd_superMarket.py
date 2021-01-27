@@ -330,7 +330,7 @@ def lottery(cookies):
             print(result["bizMsg"])
             return
 
-
+"""
 def pk(cookies):
     print("\n【PK有礼】")  # TODO
     data = getTemplate(cookies, "smtg_getTeamPkDetailInfo", {})[
@@ -371,7 +371,7 @@ def pk(cookies):
         result1 = getTemplate(cookies, "smtg_joinPkTeam", {"teamId": tmp["teamId"],
                                                            "inviteCode": random.choice(tmp["inviteCode"]), "sharePkActivityId": data["pkActivityId"], "channel": "3"})
         print(result1)
-    
+"""  
 
 
 def manage(cookies):
