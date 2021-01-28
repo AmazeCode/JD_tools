@@ -18,6 +18,7 @@ plantUuid = [
              "e7lhibzb3zek3jyqcy75sz4q4n2y66crmhboqti"  #当小黑遇到小白
              "ol55gydvsstx2v4b4rd4bm7uhq3h7wlwy7o5jii", #李幸福
              "olmijoxgmjuty7qsbgf4go7l2ciynks37yfdala", #李源儿
+             "yhgveqpmpmqzmcv7g2zezc65k4uzdxy3tep7fmi", #李幸福2
              "7pt22jcko7ljrbpeask7r6avre3h7wlwy7o5jii",
              "r7zdf2yfo4phlpel3nu4q63reu",
              "e7lhibzb3zek2ssdsoyhpgn26va7nkkzj6ygely"
