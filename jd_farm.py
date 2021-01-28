@@ -17,8 +17,10 @@ waterTimesLimit = 20  # 自定义的每天浇水最大次数
 retainWaterLimit = 10  # 完成10次浇水任务的基础上,希望水滴始终高于此数
 waterFriendLimit = 2  # [0,2]   0: 始终不替他人浇水   2: 替他人浇水2次以完成任务获得25水
 
-shareCodes = ["e0f290656b634dbeab0a0da0747c8140",# dong
-              "99efa1431bb54cd8a34aaa90717fa1d8",# cui
+shareCodes = [
+              "99efa1431bb54cd8a34aaa90717fa1d8",# Smile
+              "e0f290656b634dbeab0a0da0747c8140",# Dong
+              "5ac72c51bec24628bdd88d514cd3df58",# 当小黑遇到小白
               "ab11c483a1c542c285fb95c4fe65b640",# 李幸福
               "60ce5d7215ed45a9a0fa763e67804a33" # 李源儿
               ]

@@ -12,8 +12,9 @@ import time
 5、cron 0 */3 * * *
 """
 shareCodes = [
-              "e0f290656b634dbeab0a0da0747c8140", # dong
               "99efa1431bb54cd8a34aaa90717fa1d8", # Smile
+              "e0f290656b634dbeab0a0da0747c8140", # Dong
+              "5ac72c51bec24628bdd88d514cd3df58", # 当小黑遇到小白
               "ab11c483a1c542c285fb95c4fe65b640", # 李幸福
               "60ce5d7215ed45a9a0fa763e67804a33", # 李源儿
               "c081c648576e4e61a9697c3981705826",
