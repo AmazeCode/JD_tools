@@ -18,6 +18,7 @@ retainFoodAmountLimit = 40  # 完成10次喂养任务的基础上,希望food始�
 shareCodes = [
     "MTAxODc2NTE0NzAwMDAwMDAwNTcxOTg3NQ==", # Smile
     "MTAxODc2NTEzMTAwMDAwMDAxNzU2NzExOQ==", # Dong
+    "MTEzMzI0OTE0NTAwMDAwMDA0Mzk3MzQ0OQ==", # Dong2
     "MTE1NDQ5MzYwMDAwMDAwNDM5NjkxMDk=", # 当小黑遇上小白
     "MTE1NDQ5MzYwMDAwMDAwNDM5Mjg4MjE=", # 李幸福
     "MTE1NDUwMTI0MDAwMDAwMDQzOTM4NDgx", # 李源儿
