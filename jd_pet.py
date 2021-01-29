@@ -22,10 +22,7 @@ shareCodes = [
     "MTE1NDQ5MzYwMDAwMDAwNDM5NjkxMDk=", # 当小黑遇上小白
     "MTE1NDQ5MzYwMDAwMDAwNDM5Mjg4MjE=", # 李幸福
     "MTE1NDUwMTI0MDAwMDAwMDQzOTM4NDgx", # 李源儿
-    "MTE1NDUyMjEwMDAwMDAwNDM5NzQzNjc=", # 李幸福2
-    "MTAxODc2NTEzMTAwMDAwMDAwOTYwNDkzMQ==", 
-    "MTAxODcxOTI2NTAwMDAwMDAwMTY0NTc4OQ==", 
-    "MTAxODc2NTEzMDAwMDAwMDAyNjYzMDQ3MQ=="
+    "MTE1NDUyMjEwMDAwMDAwNDM5NzQzNjc=" # 李幸福2
 ]  # 自己不能助力自己,填写他人的助力码
 
 

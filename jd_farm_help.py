@@ -8,7 +8,7 @@ import time
 1、此脚本用于东东农场 【好友】邀请助力 添加好友
 2、效果:新加好友时为对方增加10g水;对方执行此脚本同理
 3、此助力独立于助力得水，目前助力上限未知
-4、欢迎补充一个足够多的shareCodes列表
+4、欢迎补充一个足够多的shareCodes列表,只能是非好友关系,才能为对方助力
 5、cron 0 */3 * * *
 """
 shareCodes = [
@@ -19,26 +19,6 @@ shareCodes = [
               "ab11c483a1c542c285fb95c4fe65b640", # 李幸福
               "60ce5d7215ed45a9a0fa763e67804a33", # 李源儿
               "fdc2685a72e54834886a1ac76d8fe407"  # 李幸福2
-              "c081c648576e4e61a9697c3981705826",
-              "f1d0d5ebda7c48c6b3d262d5574315c7",
-              "13d13188218a4e3aae0c4db803c81985",
-              "d2d5d435675544679413cb9145577e0f",  # DoveBoy
-              "101e53c859b5424b8d29fb389aa5aca7",  # muzi13
-              "58a45733c946470bb6436bf1ada57be2",  # leeyiding
-              "62e6c1861d4c4fbebe1e40f109755100",  # GitCourser
-              "f0c3537f49b74bf2a4c7399d8cccda65",  # zhudan
-              "3de9821f43c14c33b3c482fd61136633",  # Matear890
-              "01766d5c8676418da8f0cf4d49c0640b",  # sdogsq
-              "6d06fa98969f4fd2aa8b03b3178cc597",  # sdogsq
-              "0f3db2ee6707429eb07fca305121a3d4",  # zaccheo
-              "804b416fde154c64a56e6662abd9b6bf",  # kasim
-              "5d73bb7a53fd4aef8af8050531e2d6f5",  # watewq
-              "8a8ac88e98904f40a25a41c9e492436e",  # zaccheo
-              "ac0357128b554a928cad2456c0985db1",  # zaccheo
-              "5fc25368858e4418a90975a7d0e23c6c",  # awei4287
-              "3b2e1bee164249bca099b60d7e4b0082",  # wuli01
-              "6447c9c61b0c4f9a89b6d497fcaf47c9",  # wuli01
-              "e4ab3f1c4add4513b07ee88b9c9f7784"  # heros-sky
               ]  # 欢迎在此处填写
 
 def postTemplate(cookies, functionId, body):
@@ -97,7 +77,7 @@ def help(cookies):
         "farmUserPro"]["shareCode"]
 
     shareCodes_diff = list(
-        set(shareCodes).difference(myFriendCode, [myshareCode]))  # 去掉自己以及已是好友关系的shareCode
+        set(shareCodes).difference([myshareCode]))  # 去掉自己shareCode 若要去掉自己和好友的使用后边写法 (myFriendCode, [myshareCode])
     print("准备助力的shareCodes:", shareCodes_diff)
     if not shareCodes_diff:
         print("脚本中的shareCodes暂时没发现新好友,退出助力")

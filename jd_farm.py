@@ -275,6 +275,7 @@ def _help(cookies, shareCodes):
 def masterHelp(cookies):
     print("\n【助力得水】")
     help_me_list = postTemplate(cookies, "masterHelpTaskInitForFarm", {})
+    # 返回助力个数
     masterHelpPeoples = len(help_me_list["masterHelpPeoples"])
     print(
         f"""完成进度 {masterHelpPeoples}/5   {help_me_list["f"]}""")
