@@ -465,7 +465,7 @@ def run():
             print("##"*25)
             print("\n\n")
         else:
-            print("正常跳出不执行!")
+            print(cookies["pt_pin"]+":正常跳出不执行!")
 
 if __name__ == "__main__":
     run()
