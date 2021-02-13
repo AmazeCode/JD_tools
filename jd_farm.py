@@ -22,8 +22,9 @@ shareCodes = [
               "e0f290656b634dbeab0a0da0747c8140",# Dong
               "76abf74ddbf5434ab107cd968e3a77f0",# Dong2
               "5ac72c51bec24628bdd88d514cd3df58",# 当小黑遇到小白
+              "c2109f578a5447b69eb0ea956efa1661",# Dong3
               "ab11c483a1c542c285fb95c4fe65b640",# 李幸福
-              "60ce5d7215ed45a9a0fa763e67804a33" # 李源儿
+              "60ce5d7215ed45a9a0fa763e67804a33", # 李源儿
               "fdc2685a72e54834886a1ac76d8fe407"  # 李幸福2
               ]
 """
@@ -265,11 +266,12 @@ def takeTask(cookies):
     return _totalWaterTaskInit["totalWaterTaskTimes"]
 
 
-def _help(cookies, shareCodes):
+def _help(cookies, shareCodes, myHelpCode):
     for i in shareCodes:
-        postTemplate(cookies, "initForFarm", {"shareCode": i})
-        postTemplate(cookies, "initForFarm", {
-            "shareCode": f"{i}-inviteFriend"})
+        if myHelpCode.strip() != i.strip():
+            postTemplate(cookies, "initForFarm", {"shareCode": i})
+            postTemplate(cookies, "initForFarm", {"shareCode": f"{i}-inviteFriend"})
+
 
 
 def masterHelp(cookies):
@@ -382,7 +384,7 @@ def run():
             f"""剩余浇水次数: {lastTimes}""")
         turnTable(cookies)
         clockIn(cookies)
-        _help(cookies, shareCodes)
+        _help(cookies, shareCodes, {myshareCode})
         takeTask(cookies)
         masterHelp(cookies)
         luck(cookies)

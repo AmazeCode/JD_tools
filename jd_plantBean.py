@@ -15,11 +15,11 @@ plantUuid = [
              "olmijoxgmjutya5x4ge5nninkglpceeswgr5jza", #Smile
              "e7lhibzb3zek2epdhv3libuhint2ydnoc3f6wlq", #Dong
              "5kuvbyio45zwezryhfjh4ua3ob7g24jxsa4ekly", #Dong2
-             "e7lhibzb3zek3jyqcy75sz4q4n2y66crmhboqti"  #当小黑遇到小白
+             "e7lhibzb3zek3jyqcy75sz4q4n2y66crmhboqti",  #当小黑遇到小白
+             "2vgtxj43q3jqyk2ir3svd3mfvjzikfrxjl723vq", #Dong3
              "ol55gydvsstx2v4b4rd4bm7uhq3h7wlwy7o5jii", #李幸福
              "olmijoxgmjuty7qsbgf4go7l2ciynks37yfdala", #李源儿
-             "yhgveqpmpmqzmcv7g2zezc65k4uzdxy3tep7fmi", #李幸福2
-             "e7lhibzb3zek2ssdsoyhpgn26va7nkkzj6ygely"  # --
+             "yhgveqpmpmqzmcv7g2zezc65k4uzdxy3tep7fmi" #李幸福2
             ]  # 填写别人的助力码
 """
             "7pt22jcko7ljrbpeask7r6avre3h7wlwy7o5jii"  # 无用
@@ -158,8 +158,9 @@ def takeTask(cookies, taskList):
                 time.sleep(1)
 
 
-def _help(cookies, plantUuid):
+def _help(cookies, plantUuid, myHelpUuid):
     for i in plantUuid:
+        if myHelpUuid.strip() != i.strip():
         functionTemplate(cookies, "plantBeanIndex", {
                          "plantUuid": i, "followType": "1", "wxHeadImgUrl": "", "shareUuid": "", })
 
@@ -229,7 +230,7 @@ def run():
             f"""【{plantBeanIndex["data"]["plantUserInfo"]["plantNickName"]}】\n""")
         print(
             f"""我的助力码: {plantBeanIndex["data"]["jwordShareInfo"]["shareUrl"].split("=")[-1]}\n""")
-        _help(cookies, plantUuid)
+        _help(cookies, plantUuid, {plantBeanIndex["data"]["jwordShareInfo"]["shareUrl"].split("=")[-1]})
         roundList = plantBeanIndex["data"]["roundList"]
         lastRoundId = roundList[0]["roundId"]  # 上期id
         currentRoundId = roundList[1]["roundId"]  # 本期id

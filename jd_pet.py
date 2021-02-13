@@ -20,6 +20,7 @@ shareCodes = [
     "MTAxODc2NTEzMTAwMDAwMDAxNzU2NzExOQ==", # Dong
     "MTEzMzI0OTE0NTAwMDAwMDA0Mzk3MzQ0OQ==", # Dong2
     "MTE1NDQ5MzYwMDAwMDAwNDM5NjkxMDk=", # 当小黑遇上小白
+    "MTE1NDQ5OTUwMDAwMDAwNDQyNzQ3Mzk=", # Dong3
     "MTE1NDQ5MzYwMDAwMDAwNDM5Mjg4MjE=", # 李幸福
     "MTE1NDUwMTI0MDAwMDAwMDQzOTM4NDgx", # 李源儿
     "MTE1NDUyMjEwMDAwMDAwNDM5NzQzNjc=" # 李幸福2
@@ -95,9 +96,11 @@ def energyCollect(cookies):
         time.sleep(2)
 
 
-def help(cookies, shareCodes):
+def help(cookies, shareCodes, myHelpCode):
     for i in shareCodes:
-        functionTemplate(cookies, "slaveHelp", {"shareCode": str(i)})
+        if myHelpCode.strip() != i.strip():
+            functionTemplate(cookies, "slaveHelp", {"shareCode": str(i)})
+
 
 
 def masterHelp(cookies):
@@ -206,7 +209,7 @@ def run():
         print(f"""当前进度: {status["medalPercent"]}%""")
         print(f"""当前饵料: {status["foodAmount"]}""")
         print("我的助力码: ", status["shareCode"])
-        help(cookies, shareCodes)
+        help(cookies, shareCodes, status["shareCode"])
         takeTask(cookies)
         sport(cookies)
         masterHelp(cookies)
