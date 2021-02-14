@@ -230,9 +230,10 @@ def waterWheel(cookies,currentRoundId):
 isCanRun = 1
 
 def run():
+    global isCanRun
     for cookies in jdCookie.get_cookies():
-        global isCanRun
         for ptKey in removePtKey:
+            print({cookies.get("pt_key")})
             if cookies.get("pt_key") == ptKey:
                 isCanRun = 0
                 break
