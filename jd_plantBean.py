@@ -231,9 +231,9 @@ isCanRun = 1
 
 def run():
     for cookies in jdCookie.get_cookies():
+        global isCanRun
         for ptKey in removePtKey:
             if cookies.get("pt_key") == ptKey:
-                global isCanRun
                 isCanRun = 0
                 break
             else:
@@ -262,7 +262,6 @@ def run():
             steal(cookies, currentRoundId)
             water(cookies,currentRoundId)
             getReward(cookies, roundList[0]["awardState"],lastRoundId)
-            global isCanRun
             isCanRun = 1
             print("\nEND\n")
             print("##"*30)
