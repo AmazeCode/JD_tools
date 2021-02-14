@@ -27,6 +27,11 @@ plantUuid = [
             "e7lhibzb3zek2ssdsoyhpgn26va7nkkzj6ygely"
 """
 
+"""
+需要排除不执行的账号pt_key
+"""
+removePtKey = ["jd_yFTiOwGpTVJl","jd_AVhCUibuArVL"]
+
 
 def functionTemplate(cookies, functionId, body):
     headers = {
@@ -223,30 +228,39 @@ def waterWheel(cookies,currentRoundId):
         return
 
 def run():
+    isCanRun = true
     for cookies in jdCookie.get_cookies():
-        plantBeanIndex = postTemplate(cookies, "plantBeanIndex", {})
-        print(
-            f"""【{plantBeanIndex["data"]["plantUserInfo"]["plantNickName"]}】\n""")
-        print(
-            f"""我的助力码: {plantBeanIndex["data"]["jwordShareInfo"]["shareUrl"].split("=")[-1]}\n""")
-        _help(cookies, plantUuid, {plantBeanIndex["data"]["jwordShareInfo"]["shareUrl"].split("=")[-1]})
-        roundList = plantBeanIndex["data"]["roundList"]
-        lastRoundId = roundList[0]["roundId"]  # 上期id
-        currentRoundId = roundList[1]["roundId"]  # 本期id
-        taskList = plantBeanIndex["data"]["taskList"]  # 任务列表
+        for ptKey in removePtKey:
+            if cookies.get("pt_key") == ptKey:
+                isCanRun = false
+                break
+            else:
+                continue
 
-        takeTask(cookies, taskList)  # 执行每日任务
-        print("     任务   进度")
-        for i in postTemplate(cookies, "plantBeanIndex", {})["data"]["taskList"]:
+        if isCanRun == true:
+            plantBeanIndex = postTemplate(cookies, "plantBeanIndex", {})
             print(
-                f"""[{i["taskName"]}]  {i["gainedNum"]}/{i["totalNum"]}   {i["isFinished"]} """)
+                f"""【{plantBeanIndex["data"]["plantUserInfo"]["plantNickName"]}】\n""")
+            print(
+                f"""我的助力码: {plantBeanIndex["data"]["jwordShareInfo"]["shareUrl"].split("=")[-1]}\n""")
+            _help(cookies, plantUuid, {plantBeanIndex["data"]["jwordShareInfo"]["shareUrl"].split("=")[-1]})
+            roundList = plantBeanIndex["data"]["roundList"]
+            lastRoundId = roundList[0]["roundId"]  # 上期id
+            currentRoundId = roundList[1]["roundId"]  # 本期id
+            taskList = plantBeanIndex["data"]["taskList"]  # 任务列表
 
-        egg(cookies)
-        waterWheel(cookies,currentRoundId)
-        steal(cookies, currentRoundId)
-        water(cookies,currentRoundId)
-        getReward(cookies, roundList[0]["awardState"],lastRoundId)
-        print("\nEND\n")
-        print("##"*30)
+            takeTask(cookies, taskList)  # 执行每日任务
+            print("     任务   进度")
+            for i in postTemplate(cookies, "plantBeanIndex", {})["data"]["taskList"]:
+                print(
+                    f"""[{i["taskName"]}]  {i["gainedNum"]}/{i["totalNum"]}   {i["isFinished"]} """)
+
+            egg(cookies)
+            waterWheel(cookies,currentRoundId)
+            steal(cookies, currentRoundId)
+            water(cookies,currentRoundId)
+            getReward(cookies, roundList[0]["awardState"],lastRoundId)
+            print("\nEND\n")
+            print("##"*30)
 if __name__ == "__main__":
     run()
