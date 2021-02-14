@@ -267,7 +267,6 @@ def takeTask(cookies):
 
 
 def _help(cookies, shareCodes, myHelpCode):
-    print(f"""传入的助力码:{myHelpCode}""")
     for i in shareCodes:
         if myHelpCode != i:
             postTemplate(cookies, "initForFarm", {"shareCode": i})

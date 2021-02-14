@@ -98,7 +98,7 @@ def energyCollect(cookies):
 
 def help(cookies, shareCodes, myHelpCode):
     for i in shareCodes:
-        if myHelpCode.strip() != i.strip():
+        if myHelpCode != i:
             functionTemplate(cookies, "slaveHelp", {"shareCode": str(i)})
 
 
