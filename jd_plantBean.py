@@ -226,18 +226,20 @@ def waterWheel(cookies,currentRoundId):
     if "errorMessage" in result:
         print(result["errorMessage"])
         return
+# 定义全局变量,用于判断账号是否可以执行程序
+isCanRun = 1
 
 def run():
-    isCanRun = true
     for cookies in jdCookie.get_cookies():
         for ptKey in removePtKey:
             if cookies.get("pt_key") == ptKey:
-                isCanRun = false
+                global isCanRun
+                isCanRun = 0
                 break
             else:
                 continue
 
-        if isCanRun == true:
+        if isCanRun == 1:
             plantBeanIndex = postTemplate(cookies, "plantBeanIndex", {})
             print(
                 f"""【{plantBeanIndex["data"]["plantUserInfo"]["plantNickName"]}】\n""")
@@ -260,6 +262,8 @@ def run():
             steal(cookies, currentRoundId)
             water(cookies,currentRoundId)
             getReward(cookies, roundList[0]["awardState"],lastRoundId)
+            global isCanRun
+            isCanRun = 1
             print("\nEND\n")
             print("##"*30)
 if __name__ == "__main__":
