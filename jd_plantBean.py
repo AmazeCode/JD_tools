@@ -28,9 +28,9 @@ plantUuid = [
 """
 
 """
-需要排除不执行的账号pt_key
+需要排除不执行的账号pt_key ,"jd_AVhCUibuArVL"
 """
-removePtKey = ["jd_yFTiOwGpTVJl","jd_AVhCUibuArVL"]
+removePtPin = ["jd_yFTiOwGpTVJl"]
 
 
 def functionTemplate(cookies, functionId, body):
@@ -232,9 +232,8 @@ isCanRun = 1
 def run():
     global isCanRun
     for cookies in jdCookie.get_cookies():
-        for ptKey in removePtKey:
-            print({cookies.get("pt_key")})
-            if cookies.get("pt_key") == ptKey:
+        for ptPin in removePtPin:
+            if cookies.get("pt_pin") == ptPin:
                 isCanRun = 0
                 break
             else:
