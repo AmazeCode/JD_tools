@@ -159,10 +159,10 @@ def takeTask(cookies, taskList):
 
 
 def _help(cookies, plantUuid, myHelpUuid):
+    print(f"""传入的助力码:{myHelpUuid}""")
     for i in plantUuid:
-        if myHelpUuid.strip() != i.strip():
-        functionTemplate(cookies, "plantBeanIndex", {
-                         "plantUuid": i, "followType": "1", "wxHeadImgUrl": "", "shareUuid": "", })
+        if myHelpUuid != i:
+            functionTemplate(cookies, "plantBeanIndex", {"plantUuid": i, "followType": "1", "wxHeadImgUrl": "", "shareUuid": "", })
 
 
 def steal(cookies, roundId):
