@@ -96,10 +96,10 @@ def energyCollect(cookies):
         time.sleep(2)
 
 
-def help(cookies, shareCodes, myHelpCode):
+def help(cookies, shareCodes):
     for i in shareCodes:
-        if myHelpCode != i:
-            functionTemplate(cookies, "slaveHelp", {"shareCode": str(i)})
+        functionTemplate(cookies, "slaveHelp", {"shareCode": str(i)})
+
 
 
 
@@ -209,7 +209,7 @@ def run():
         print(f"""当前进度: {status["medalPercent"]}%""")
         print(f"""当前饵料: {status["foodAmount"]}""")
         print("我的助力码: ", status["shareCode"])
-        help(cookies, shareCodes, status["shareCode"])
+        help(cookies, shareCodes)
         takeTask(cookies)
         sport(cookies)
         masterHelp(cookies)
