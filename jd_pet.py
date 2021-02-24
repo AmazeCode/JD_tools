@@ -29,7 +29,6 @@ shareCodes = [
 ]  # 自己不能助力自己,填写他人的助力码
 
 
-
 def functionTemplate(cookies, functionId, body):
     headers = {
         'User-Agent': 'JD4iPhone/167283(iPhone;9.0.0;13.5.1)',
