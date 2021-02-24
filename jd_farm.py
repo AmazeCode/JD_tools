@@ -22,7 +22,9 @@ shareCodes = [
               "e0f290656b634dbeab0a0da0747c8140",# Dong
               "76abf74ddbf5434ab107cd968e3a77f0",# Dong2
               "5ac72c51bec24628bdd88d514cd3df58",# 当小黑遇到小白
-              "c2109f578a5447b69eb0ea956efa1661",# Dong3
+              "c2109f578a5447b69eb0ea956efa1661", # Dong3 father
+              "9fe64ff57c1c478084f1baa22c962ed8", # Dong4 big sister
+              "13ffc68593c54c908502064d23eda3cb", # Dong5 small sister
               "ab11c483a1c542c285fb95c4fe65b640",# 李幸福
               "60ce5d7215ed45a9a0fa763e67804a33", # 李源儿
               "fdc2685a72e54834886a1ac76d8fe407"  # 李幸福2

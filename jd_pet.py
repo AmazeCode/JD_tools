@@ -20,7 +20,9 @@ shareCodes = [
     "MTAxODc2NTEzMTAwMDAwMDAxNzU2NzExOQ==", # Dong
     "MTEzMzI0OTE0NTAwMDAwMDA0Mzk3MzQ0OQ==", # Dong2
     "MTE1NDQ5MzYwMDAwMDAwNDM5NjkxMDk=", # 当小黑遇上小白
-    "MTE1NDQ5OTUwMDAwMDAwNDQyNzQ3Mzk=", # Dong3
+    "MTE1NDQ5OTUwMDAwMDAwNDQyNzQ3Mzk=", # Dong3 father
+    "MTE1NDQ5OTIwMDAwMDAwNDQ2NzUzNzk=", # Dong4 big sister
+    "MTEzMzI0OTE0NTAwMDAwMDA0NDY3NDI5Nw==", # Dong5 small sister
     "MTE1NDQ5MzYwMDAwMDAwNDM5Mjg4MjE=", # 李幸福
     "MTE1NDUwMTI0MDAwMDAwMDQzOTM4NDgx", # 李源儿
     "MTE1NDUyMjEwMDAwMDAwNDM5NzQzNjc=" # 李幸福2
